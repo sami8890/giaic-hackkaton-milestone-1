@@ -1,136 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Muhammad Sami - Interactive Portfolio Resume</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-</head>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
 
-<body>
-        <!-- Particle Background -->
+  <body>
+    <!-- Particle Background -->
     <div id="particles-js"></div>
 
     <header>
-        <div class="container">
-            <h1>Interactive Resume</h1>
-        </div>
+      <div class="container">
+        <h1>Interactive Resume</h1>
+      </div>
     </header>
 
     <main class="container">
-        <section class="profile-section">
-            <div class="image-section">
-                <img src="my.png" alt="Muhammad Sami's Profile Picture">
-            </div>
-            <div class="info-card">
-                <h2 class="section-title">Personal Information</h2>
-                <div class="info-grid">
-                    <span class="info-label"><i class="fas fa-user"></i> Name:</span>
-                    <span>Muhammad Sami</span>
-                    <span class="info-label"><i class="fas fa-map-marker-alt"></i> Address:</span>
-                    <span>Karachi Super Highway Scheme 33, Chutta Gabol Goth</span>
-                    <span class="info-label"><i class="fas fa-phone"></i> Phone:</span>
-                    <span>0330-2855702</span>
-                    <span class="info-label"><i class="fas fa-envelope"></i> Email:</span>
-                    <span>samigabol12@gmail.com</span>
-                </div>
-            </div>
-        </section>
+      <section class="profile-section">
+        <div class="image-section">
+          <img src="my.png" alt="Muhammad Sami's Profile Picture" />
+        </div>
+        <div class="info-card">
+          <h2 class="section-title">Personal Information</h2>
+          <div class="info-grid">
+            <span class="info-label"><i class="fas fa-user"></i> Name:</span>
+            <span>Muhammad Sami</span>
+            <span class="info-label"
+              ><i class="fas fa-map-marker-alt"></i> Address:</span
+            >
+            <span>Karachi Super Highway Scheme 33, Chutta Gabol Goth</span>
+            <span class="info-label"><i class="fas fa-phone"></i> Phone:</span>
+            <span>0330-2855702</span>
+            <span class="info-label"
+              ><i class="fas fa-envelope"></i> Email:</span
+            >
+            <span>samigabol12@gmail.com</span>
+          </div>
+        </div>
+      </section>
 
-        <section class="info-card">
-            <h2 class="section-title">Education</h2>
-            <div class="info-grid">
-                <span class="info-label"><i class="fas fa-graduation-cap"></i> Current Degree:</span>
-                <span>First Year Pre-Medical</span>
-                <span class="info-label"><i class="fas fa-university"></i> Institution:</span>
-                <span>Government Boys Degree College Gulshan-e-Iqbal</span>
+      <section class="info-card">
+        <h2 class="section-title">Education</h2>
+        <div class="info-grid">
+          <span class="info-label"
+            ><i class="fas fa-graduation-cap"></i> Current Degree:</span
+          >
+          <span>First Year Pre-Medical</span>
+          <span class="info-label"
+            ><i class="fas fa-university"></i> Institution:</span
+          >
+          <span>Government Boys Degree College Gulshan-e-Iqbal</span>
+        </div>
+      </section>
+
+      <button class="toggle-button" id="toggle-skills">
+        <i class="fas fa-code"></i> Toggle Skills
+      </button>
+
+      <section class="skills-container" id="skills">
+        <h2 class="section-title">Technical Skills</h2>
+        <div class="skills-grid">
+          <div class="skill-item">
+            <i class="fab fa-html5"></i> HTML
+            <div class="skill-progress">
+              <div class="progress-bar" data-progress="90"></div>
             </div>
-        </section>
-
-        <button class="toggle-button" id="toggle-skills">
-            <i class="fas fa-code"></i> Toggle Skills
-        </button>
-
-        <section class="skills-container" id="skills">
-            <h2 class="section-title">Technical Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-item">
-                    <i class="fab fa-html5"></i> HTML
-                    <div class="skill-progress">
-                        <div class="progress-bar" data-progress="90"></div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <i class="fab fa-css3-alt"></i> CSS
-                    <div class="skill-progress">
-                        <div class="progress-bar" data-progress="85"></div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <i class="fab fa-js"></i> JavaScript
-                    <div class="skill-progress">
-                        <div class="progress-bar" data-progress="80"></div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <i class="fab fa-typescript"></i> TypeScript
-                    <div class="skill-progress">
-                        <div class="progress-bar" data-progress="75"></div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <i class="fab fa-react"></i> Next.js
-                    <div class="skill-progress">
-                        <div class="progress-bar" data-progress="70"></div>
-                    </div>
-                </div>
+          </div>
+          <div class="skill-item">
+            <i class="fab fa-css3-alt"></i> CSS
+            <div class="skill-progress">
+              <div class="progress-bar" data-progress="85"></div>
             </div>
-        </section>
-
-        <section class="info-card">
-            <h2 class="section-title">Work Experience</h2>
-            <div class="experience-timeline">
-                <div class="timeline-item">
-                    <h3>Freelance Developer</h3>
-                    <p>6+ months experience in programming</p>
-                </div>
-                <div class="timeline-item">
-                    <h3>Platforms</h3>
-                    <p><i class="fab fa-facebook"></i> Facebook</p>
-                    <p><i class="fab fa-instagram"></i> Instagram</p>
-                </div>
+          </div>
+          <div class="skill-item">
+            <i class="fab fa-js"></i> JavaScript
+            <div class="skill-progress">
+              <div class="progress-bar" data-progress="80"></div>
             </div>
-        </section>
-
-        <section class="info-card">
-            <h2 class="section-title">Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <h3><i class="fas fa-code"></i> Portfolio Website</h3>
-                    <p>Interactive resume built with modern web technologies</p>
-                    <div class="skill-progress">
-                        <div class="progress-bar" data-progress="90"></div>
-                    </div>
-                </div>
-                <!-- Add more project cards as needed -->
+          </div>
+          <div class="skill-item">
+            <i class="fab fa-typescript"></i> TypeScript
+            <div class="skill-progress">
+              <div class="progress-bar" data-progress="75"></div>
             </div>
-        </section>
+          </div>
+          <div class="skill-item">
+            <i class="fab fa-react"></i> Next.js
+            <div class="skill-progress">
+              <div class="progress-bar" data-progress="70"></div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-        <section class="info-card">
-            <h2 class="section-title">Contact Me</h2>
-            <form class="contact-form" id="contact-form">
-                <input type="text" class="form-input" placeholder="Name" required>
-                <input type="email" class="form-input" placeholder="Email" required>
-                <textarea class="form-input" rows="4" placeholder="Message" required></textarea>
-                <button type="submit" class="toggle-button">Send Message</button>
-            </form>
-        </section>
+      <section class="info-card">
+        <h2 class="section-title">Work Experience</h2>
+        <div class="experience-timeline">
+          <div class="timeline-item">
+            <h3>Freelance Developer</h3>
+            <p>6+ months experience in programming</p>
+          </div>
+          <div class="timeline-item">
+            <h3>Platforms</h3>
+            <p><i class="fab fa-facebook"></i> Facebook</p>
+            <p><i class="fab fa-instagram"></i> Instagram</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="info-card">
+        <h2 class="section-title">Projects</h2>
+        <div class="projects-grid">
+          <div class="project-card">
+            <h3><i class="fas fa-code"></i> Portfolio Website</h3>
+            <p>Interactive resume built with modern web technologies</p>
+            <div class="skill-progress">
+              <div class="progress-bar" data-progress="90"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="info-card">
+        <h2 class="section-title">Contact Me</h2>
+        <form class="contact-form" id="contact-form">
+          <input type="text" class="form-input" placeholder="Name" required />
+          <input type="email" class="form-input" placeholder="Email" required />
+          <textarea
+            class="form-input"
+            rows="4"
+            placeholder="Message"
+            required
+          ></textarea>
+          <button type="submit" class="toggle-button">Send Message</button>
+        </form>
+      </section>
     </main>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
     <script src="script.js"></script>
-</body>
-
+  </body>
 </html>
