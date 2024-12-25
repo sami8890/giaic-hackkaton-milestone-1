@@ -123,4 +123,131 @@ button {
     justify-content: center;
     align-items: center;
     text-align: center;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* google font poppins  */
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: poppins, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+
+}
+
+body {
+    background-color: #000000c9;
+    color: white;
+}
+
+header h1 {
+    background-color: #5745;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-family: "Poppins", system-ui;
+    font-weight: 500;
+    font-style: italic;
+}
+
+/* i have combined these sections because i want a same style for Each Sections and also i dont want extra lines this was the reason i combined sections   */
+/*  i have learned  combined tags from youtube !  */
+#personal-info,
+#education,
+#skills,
+#work-experience {
+    padding: 20px;
+    width: 60vw;
+    border-bottom: 1px solid #ccc;
+    margin: 30px;
+    border: 2px solid rgb(17, 89, 161);
+    border-radius: 10px 60px;
+    overflow: auto;
+    background-color: rgba(17, 89, 161, 0.274);
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+
+}
+/* this style is apply on image section */
+.image-section {
+    display: flex;
+    justify-content: end;
+    position: relative;
+    align-items: center;
+    overflow: hidden;
+    justify-items: end;
+    padding: 39px 67px;
+    height: 60vh;
+    width: 96vw;
+    background-color: rgba(173, 194, 255, 0.068);
+    border-radius: -50%;
+
+}
+ 
+/* this style is apply for only  image  */
+.image-section img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border: 5px solid #b6adf8;
+    border-radius: 10px 60px;
+    padding: 10px;
+    width: 250px;
+    height: auto;
+    object-fit: cover;
+    border-radius: -50%;
+    /* overflow: hidden; */
+}
+
+#personal-info p,
+#education p,
+#skills p,
+#work-experience p {
+    margin-bottom: 10px;
+    font: size 80px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#skills {
+    display: none;
+    /* its  display none because i have to addes the typescript functionalty to create a toggle menu  */
+    list-style-type: none;
+}
+
+
+#skills ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+button {
+    background-color: rgba(254, 0, 0, 0.807);
+    color: yellow;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 17px;
+    cursor: pointer;
+    font-size: 20px;
+    width: 20vw;
+    margin: auto;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.name-h2 {
+    background-color: red;
+    display: flex;
+    width: 17vw;
+    font-size: xx-large;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
 }
