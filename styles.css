@@ -1,253 +1,311 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-/* google font poppins  */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
+:root {
+    --primary-color: rgb(17, 89, 161);
+    --primary-light: rgba(17, 89, 161, 0.274);
+    --accent-color: #b6adf8;
+    --text-color: #ffffff;
+    --background: #000000e6;
+    --transition: all 0.3s ease;
+}
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    scroll-behavior: smooth;
-    font-family: poppins, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
-
+    font-family:  sans-serif;
 }
 
 body {
-    background-color: #000000c9;
-    color: white;
+    background-color: var(--background);
+    color: var(--text-color);
+    line-height: 1.6;
+    min-height: 100vh;
+    position: relative;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Header Styles */
+header {
+    background: linear-gradient(45deg, var(--primary-color), var(--primary-light));
+    padding: 2rem 0;
+    margin-bottom: 3rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
-    background-color: #5745;
-    color: #fff;
-    padding: 20px;
     text-align: center;
-    font-family: "Poppins", system-ui;
-    font-weight: 500;
-    font-style: italic;
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: fadeIn 1s ease-out;
 }
 
-/* i have combined these sections because i want a same style for Each Sections and also i dont want extra lines this was the reason i combined sections   */
-/*  i have learned  combined tags from youtube !  */
-#personal-info,
-#education,
-#skills,
-#work-experience {
-    padding: 20px;
-    width: 60vw;
-    border-bottom: 1px solid #ccc;
-    margin: 30px;
-    border: 2px solid rgb(17, 89, 161);
-    border-radius: 10px 60px;
-    overflow: auto;
-    background-color: rgba(17, 89, 161, 0.274);
-    color: #fff;
-    font-size: 20px;
-    font-weight: 500;
-
+/* Section Styles */
+.profile-section {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
 }
-/* this style is apply on image section */
+
 .image-section {
-    display: flex;
-    justify-content: end;
     position: relative;
-    align-items: center;
     overflow: hidden;
-    justify-items: end;
-    padding: 39px 67px;
-    height: 60vh;
-    width: 96vw;
-    background-color: rgba(173, 194, 255, 0.068);
-    /* border-radius: -50%; */
-
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(17, 89, 161, 0.2);
 }
- 
-/* this style is apply for only  image  */
+
 .image-section img {
-    height: 100%;
     width: 100%;
-    object-fit: cover;
-    border: 5px solid #b6adf8;
-    border-radius: 10px 60px;
-    padding: 10px;
-    width: 250px;
     height: auto;
-    object-fit: cover;
-    border-radius: -50%;
-    /* overflow: hidden; */
+    transition: var(--transition);
 }
 
-#personal-info p,
-#education p,
-#skills p,
-#work-experience p {
-    margin-bottom: 10px;
-    font: size 80px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+.image-section:hover img {
+    transform: scale(1.05);
 }
 
-#skills {
-    display: none;
-    /* its  display none because i have to addes the typescript functionalty to create a toggle menu  */
-    list-style-type: none;
+.info-card {
+    background: rgba(17, 89, 161, 0.1);
+    padding: 2rem;
+    border-radius: 20px;
+    border: 1px solid rgba(182, 173, 248, 0.2);
+    transition: var(--transition);
 }
 
-
-#skills ul {
-    list-style-type: none;
-    padding: 0;
+.info-card:hover {
+    transform: translateY(-5px);
 }
 
-button {
-    background-color: rgba(254, 0, 0, 0.807);
-    color: yellow;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 17px;
-    cursor: pointer;
-    font-size: 20px;
-    width: 20vw;
-    margin: auto;
-    font-weight: 400;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.name-h2 {
-    background-color: red;
-    display: flex;
-    width: 17vw;
-    font-size: xx-large;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-/* google font poppins  */
-
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-    font-family: poppins, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
-
-}
-
-body {
-    background-color: #000000c9;
-    color: white;
-}
-
-header h1 {
-    background-color: #5745;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-    font-family: "Poppins", system-ui;
-    font-weight: 500;
-    font-style: italic;
-}
-
-/* i have combined these sections because i want a same style for Each Sections and also i dont want extra lines this was the reason i combined sections   */
-/*  i have learned  combined tags from youtube !  */
-#personal-info,
-#education,
-#skills,
-#work-experience {
-    padding: 20px;
-    width: 60vw;
-    border-bottom: 1px solid #ccc;
-    margin: 30px;
-    border: 2px solid rgb(17, 89, 161);
-    border-radius: 10px 60px;
-    overflow: auto;
-    background-color: rgba(17, 89, 161, 0.274);
-    color: #fff;
-    font-size: 20px;
-    font-weight: 500;
-
-}
-/* this style is apply on image section */
-.image-section {
-    display: flex;
-    justify-content: end;
+/* Title Styles */
+.section-title {
+    font-size: 1.5rem;
+    color: var(--accent-color);
+    margin-bottom: 1.5rem;
     position: relative;
-    align-items: center;
-    overflow: hidden;
-    justify-items: end;
-    padding: 39px 67px;
-    height: 60vh;
-    width: 96vw;
-    background-color: rgba(173, 194, 255, 0.068);
-    border-radius: -50%;
-
+    padding-left: 1rem;
 }
- 
-/* this style is apply for only  image  */
-.image-section img {
+
+.section-title::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 4px;
     height: 100%;
-    width: 100%;
-    object-fit: cover;
-    border: 5px solid #b6adf8;
-    border-radius: 10px 60px;
-    padding: 10px;
-    width: 250px;
-    height: auto;
-    object-fit: cover;
-    border-radius: -50%;
-    /* overflow: hidden; */
+    background: var(--primary-color);
+    transform: translateY(-50%);
 }
 
-#personal-info p,
-#education p,
-#skills p,
-#work-experience p {
-    margin-bottom: 10px;
-    font: size 80px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+/* Grid Layouts */
+.info-grid {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1rem;
+    align-items: center;
 }
 
-#skills {
+.info-label {
+    font-weight: 500;
+    color: var(--accent-color);
+}
+
+/* Skills Section */
+.skills-container {
     display: none;
-    /* its  display none because i have to addes the typescript functionalty to create a toggle menu  */
-    list-style-type: none;
+    padding: 2rem;
+    background: rgba(17, 89, 161, 0.1);
+    border-radius: 20px;
+    margin: 2rem 0;
 }
 
-
-#skills ul {
-    list-style-type: none;
-    padding: 0;
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
 }
 
-button {
-    background-color: rgba(254, 0, 0, 0.807);
-    color: yellow;
-    padding: 10px 20px;
+.skill-item {
+    background: var(--primary-light);
+    padding: 1.5rem;
+    border-radius: 15px;
+    transition: var(--transition);
+}
+
+.skill-item:hover {
+    background: var(--primary-color);
+    transform: translateY(-3px);
+}
+
+/* Progress Bars */
+.skill-progress {
+    height: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    margin-top: 0.5rem;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    background: var(--accent-color);
+    transform-origin: left;
+    transform: scaleX(0);
+    transition: transform 1s ease;
+}
+
+/* Buttons */
+.toggle-button {
+    background: var(--primary-color);
+    color: var(--text-color);
+    padding: 1rem 2rem;
     border: none;
-    border-radius: 17px;
+    border-radius: 25px;
     cursor: pointer;
-    font-size: 20px;
-    width: 20vw;
-    margin: auto;
-    font-weight: 400;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 2rem auto;
+    display: block;
+    transition: var(--transition);
+    box-shadow: 0 4px 15px rgba(17, 89, 161, 0.3);
 }
 
-.name-h2 {
-    background-color: red;
+.toggle-button:hover {
+    background: var(--accent-color);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(17, 89, 161, 0.4);
+}
+
+/* Theme Switcher */
+.theme-switcher {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.theme-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid var(--accent-color);
+    background: transparent;
+    color: var(--text-color);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.theme-btn:hover {
+    background: var(--accent-color);
+}
+
+/* Loading Animation */
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--background);
     display: flex;
-    width: 17vw;
-    font-size: xx-large;
     justify-content: center;
     align-items: center;
-    text-align: center;
+    z-index: 2000;
 }
+
+.loader-content {
+    width: 50px;
+    height: 50px;
+    border: 5px solid var(--primary-light);
+    border-top-color: var(--primary-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
 }
+
+/* Project Cards */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.project-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 1.5rem;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Contact Form */
+.contact-form {
+    display: grid;
+    gap: 1rem;
+    max-width: 600px;
+    margin: 2rem auto;
+}
+
+.form-input {
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--primary-light);
+    border-radius: 8px;
+    color: var(--text-color);
+    transition: var(--transition);
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: var(--accent-color);
+}
+
+/* Animations */
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+/* Theme Variables */
+[data-theme="light"] {
+    --background: #f0f2f5;
+    --text-color: #333;
+    --primary-color: #1a73e8;
+    --primary-light: rgba(26, 115, 232, 0.1);
+    --accent-color: #7b68ee;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .profile-section {
+        grid-template-columns: 1fr;
+    }
+
+}
+
